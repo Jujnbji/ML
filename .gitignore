@@ -1,0 +1,17 @@
+# Data: large, and can be re-downloaded on every machine
+data/raw/
+data5min/raw/
+*.parquet
+
+# Trained models: large binary files
+*.pt
+
+# Python's automatic cache files
+__pycache__/
+
+# Virtual environments (each machine has its own)
+.venv/
+venv/
+
+# Papers: not code
+Papers/

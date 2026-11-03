@@ -1,0 +1,93 @@
+{
+  "settings": {
+    "symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "LINKUSDT"
+    ],
+    "interval": "1m",
+    "resample": null,
+    "fit_method": "fixed",
+    "grid_given": {
+      "ret": [
+        -2.5,
+        -1.2,
+        -0.4,
+        0.4,
+        1.2,
+        2.5
+      ],
+      "upper": [
+        0.1,
+        0.6,
+        1.5
+      ],
+      "lower": [
+        0.1,
+        0.6,
+        1.5
+      ],
+      "relvol": [
+        -0.7,
+        0.0,
+        0.8
+      ],
+      "buy": [
+        -0.15,
+        0.0,
+        0.15
+      ]
+    },
+    "vol_window": 60,
+    "horizon": 3,
+    "target_bins": 5,
+    "alpha": 500.0,
+    "eval_split": "val"
+  },
+  "fit_stats": {
+    "vocab_size": 486,
+    "tokens_used": 478,
+    "entropy_bits": 6.91050009987223,
+    "perplexity": 120.30060601338076,
+    "max_entropy_bits": 8.92481250360578,
+    "mse_per_feature": {
+      "ret": 0.14289817028935273,
+      "upper": 0.033014002275918095,
+      "lower": 0.029721534592884513,
+      "relvol": 1.1379453678876061,
+      "buy": 0.01888982323434204
+    }
+  },
+  "judge": [
+    {
+      "m": 1,
+      "info_gain_bits": 0.02767388186179076,
+      "baseline_entropy_bits": 2.3219403049865717,
+      "eval_contexts_seen_in_train": 1.0,
+      "rank_ic": 0.014870350113147015,
+      "decile_spread_bps": 0.1409111516194436,
+      "n_eval": 535680
+    },
+    {
+      "m": 2,
+      "info_gain_bits": 0.0430112550910593,
+      "baseline_entropy_bits": 2.3219397778508277,
+      "eval_contexts_seen_in_train": 0.995859468339307,
+      "rank_ic": 0.013185783228393423,
+      "decile_spread_bps": 0.33021925197036134,
+      "n_eval": 535680
+    },
+    {
+      "m": 3,
+      "info_gain_bits": 0.01991752943507663,
+      "baseline_entropy_bits": 2.321939634201206,
+      "eval_contexts_seen_in_train": 0.7871191756272401,
+      "rank_ic": 0.00235015697592522,
+      "decile_spread_bps": 0.13711855598055817,
+      "n_eval": 535680
+    }
+  ]
+}
