@@ -32,7 +32,7 @@ SYMBOL   = "XRPUSDT"
 INTERVAL = "1m"
 START    = "2025-10-31"            # UTC; None = first candle
 END      = "2026-11-01"            # None = last candle
-RESAMPLE = "10m"                  # "auto", None, or e.g. "15min", "1h", "1D"
+RESAMPLE = "auto"                  # "auto", None, or e.g. "15min", "1h", "1D"
 DATA_DIR = Path(__file__).parent / "raw"
 
 SHOW_CHART   = True

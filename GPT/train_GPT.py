@@ -35,7 +35,7 @@ import torch
 # ===================== SETTINGS: edit these =====================
 HERE = Path(__file__).parent
 TOKENIZER_RUN = None                 # None = newest folder in tokenizer_runs/
-DATA_DIR = HERE / "raw"
+DATA_DIR =  ROOT / "data" / "raw"   
 SYMBOLS  = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "XRPUSDT", "ADAUSDT", "LINKUSDT"]
 INTERVAL = "1m"
 RESAMPLE = "5min"                    # None = keep 1m candles
@@ -72,7 +72,7 @@ LN2 = math.log(2)
 def find_tokenizer_run() -> Path:
     if TOKENIZER_RUN:
         return Path(TOKENIZER_RUN)
-    runs = sorted((HERE / "tokenizer_runs").iterdir())
+    runs = sorted((ROOT / "data" / "tokenizer_runs").iterdir())   # was: HERE / "tokenizer_runs"
     if not runs:
         raise SystemExit("No tokenizer runs found. Run train_simple_tokenizer.py first.")
     return runs[-1]
