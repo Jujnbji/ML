@@ -119,4 +119,6 @@ fig.add_vline(x=times[0], line=dict(color="gray", dash="dash"))
 fig.update_layout(title=f"{SYMBOL} {INTERVAL}: real vs. {N_PATHS} sampled futures from "
                         f"{path.name} (temperature {TEMPERATURE})",
                   height=650, xaxis_rangeslider_visible=False)
-fig.show()
+out = HERE / "prediction.html"
+fig.write_html(out)
+print(f"chart saved to {out}")

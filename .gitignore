@@ -5,6 +5,7 @@ data5min/raw/
 
 # Trained models: large binary files
 *.pt
+!**/runs/*.pt
 
 # Python's automatic cache files
 __pycache__/
