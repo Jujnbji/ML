@@ -3,8 +3,8 @@ data/raw/
 data5min/raw/
 *.parquet
 
-# Trained models: large binary files
-*.pt
+# Trained models: large binary files are now committed
+
 
 # Python's automatic cache files
 __pycache__/
