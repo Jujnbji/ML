@@ -1,0 +1,1 @@
+Ongoing project to train Transformer on candlesticks. Simple Tokenizer allows training of several models. This project aims to experiment with different Transformer-based architectures to maximize precision.
