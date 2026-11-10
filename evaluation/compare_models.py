@@ -133,7 +133,7 @@ def build_val(tok, symbols, T):
             "sigma": lr.rolling(W).std().shift(1).to_numpy(),
             "ewma": (lr ** 2).ewm(alpha=1 - EWMA_LAMBDA, adjust=False).mean().shift(1).to_numpy(),
             "ret": lr.to_numpy(),
-            "daykey": c * 100000 + df.index.normalize().asi8 // 86_400_000_000_000,
+            "daykey": c * 100000 + df.index.values.astype("datetime64[D]").astype(np.int64),
         }
         gap = np.r_[True, np.diff(df.index.values) != one]
         idx = np.flatnonzero((df.index >= v0) & (df.index < v1) & (col["tok"] >= 0))

@@ -97,7 +97,7 @@ def collect_starts(tok, symbols, T):
         out["past"].append(r[k[:, None] - W + np.arange(W)])      # returns of candles k-W .. k-1
         out["real"].append(logc[fut] - logc[k - 1][:, None])      # cumulative real return
         out["ewma"].append(ewma[k])                               # one-step variance known at k-1
-        out["group"].append(c * 100000 + df.index[k].normalize().asi8 // 86_400_000_000_000)
+        out["group"].append(c * 100000 + df.index[k].values.astype("datetime64[D]").astype(np.int64))
         print(f"  {sym}: {len(k)} start points")
     return {key: np.concatenate(v) for key, v in out.items()}
 
